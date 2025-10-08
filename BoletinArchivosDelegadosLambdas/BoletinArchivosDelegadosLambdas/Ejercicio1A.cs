@@ -1,6 +1,6 @@
 ﻿namespace BoletinArchivosDelegadosLambdas
 {
-    internal class Program
+    internal class Ejercicio1A
     {
         static void Main(string[] args)
         {

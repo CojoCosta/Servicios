@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diego Costa\\Desktop\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas.csproj": {}
+    "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diego Costa\\Desktop\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas.csproj": {
+    "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego Costa\\Desktop\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas.csproj",
+        "projectUniqueName": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas.csproj",
         "projectName": "BoletinArchivosDelegadosLambdas",
-        "projectPath": "C:\\Users\\Diego Costa\\Desktop\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas.csproj",
+        "projectPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas.csproj",
         "packagesPath": "C:\\Users\\Diego Costa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diego Costa\\Desktop\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\obj\\",
+        "outputPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("BoletinArchivosDelegadosLambdas")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e46fbd149ae7d533be5c6c898d883c15e1c650c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BoletinArchivosDelegadosLambdas")]
