@@ -7,21 +7,20 @@ namespace BoletinArchivosDelegadosLambdas
     {
         public static void funcionLs(string[] args)
         {
-            if (Directory.Exists(args[0]) && args.Length > 0)
+            if (args.Length > 0 && Directory.Exists(args[0]))
             {
                 DirectoryInfo directoryInfo = new DirectoryInfo(args[0]);
+                Console.ForegroundColor = ConsoleColor.Blue;
                 foreach (var directorios in directoryInfo.GetDirectories())
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkBlue;
                     Console.WriteLine(directorios.Name);
-                    Console.ResetColor();
                 }
+                Console.ForegroundColor = ConsoleColor.Magenta;
                 foreach (var archivos in directoryInfo.GetFiles())
                 {
-                    Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine($"{archivos.Name} TAMAÑO {archivos.Length}");
-                    Console.ResetColor();
+                    Console.WriteLine($"{archivos.Name} \t TAMAÑO {archivos.Length}");
                 }
+                Console.ResetColor();
             }
             else
             {

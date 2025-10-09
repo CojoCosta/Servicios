@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BoletinArchivosDelegadosLambdas": {
+      "commandName": "Project",
+      "commandLineArgs": "-n18 \"C:\\Users\\Diego Costa\\Desktop\\Acceso\\Primer Tema\\archivoUnion.txt\""
+    }
+  }
+}
