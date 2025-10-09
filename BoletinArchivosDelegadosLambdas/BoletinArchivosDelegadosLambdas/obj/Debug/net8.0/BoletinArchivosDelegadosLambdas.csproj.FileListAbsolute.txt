@@ -1,0 +1,15 @@
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\obj\Debug\net8.0\BoletinArchivosDelegadosLambdas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\obj\Debug\net8.0\BoletinArchivosDelegadosLambdas.AssemblyInfoInputs.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\obj\Debug\net8.0\BoletinArchivosDelegadosLambdas.AssemblyInfo.cs
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\obj\Debug\net8.0\BoletinArchivosDelegadosLambdas.csproj.CoreCompileInputs.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\obj\Debug\net8.0\BoletinArchivosDelegadosLambdas.sourcelink.json
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\bin\Debug\net8.0\BoletinArchivosDelegadosLambdas.exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\bin\Debug\net8.0\BoletinArchivosDelegadosLambdas.deps.json
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\bin\Debug\net8.0\BoletinArchivosDelegadosLambdas.runtimeconfig.json
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\bin\Debug\net8.0\BoletinArchivosDelegadosLambdas.dll
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\bin\Debug\net8.0\BoletinArchivosDelegadosLambdas.pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\obj\Debug\net8.0\BoletinArchivosDelegadosLambdas.dll
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\obj\Debug\net8.0\refint\BoletinArchivosDelegadosLambdas.dll
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\obj\Debug\net8.0\BoletinArchivosDelegadosLambdas.pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\obj\Debug\net8.0\BoletinArchivosDelegadosLambdas.genruntimeconfig.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinArchivosDelegadosLambdas\BoletinArchivosDelegadosLambdas\obj\Debug\net8.0\ref\BoletinArchivosDelegadosLambdas.dll
