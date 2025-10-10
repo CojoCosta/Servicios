@@ -31,9 +31,10 @@ namespace BoletinArchivosDelegadosLambdas
                         numMod = int.Parse(modificador[1]);
                         for (int i = 0; i < numMod; i++)
                         {
-                            if (sr.ReadLine != null)
+                            string linea = sr.ReadLine();
+                            if (linea != null)
                             {
-                                Console.WriteLine(sr.ReadLine());
+                                Console.WriteLine(linea);
                             }
                         }
                     }
