@@ -5,6 +5,7 @@ using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BoletinArchivosDelegadosLambdas
 {
@@ -12,7 +13,6 @@ namespace BoletinArchivosDelegadosLambdas
     {
         public static void funcionCat(string[] args)
         {
-            StreamReader sr;
             string[] modificador;
             int numMod = 0;
             try
@@ -21,31 +21,34 @@ namespace BoletinArchivosDelegadosLambdas
                 {
                     if (args.Length == 1)
                     {
-                        sr = new StreamReader(args[0]);
-                        Console.WriteLine(sr.ReadToEnd());
+                        using (StreamReader sr = new StreamReader(args[0]))//TODO using
+                        {
+                            Console.WriteLine(sr.ReadToEnd());
+                        }
                     }
                     else
                     {
-                        sr = new StreamReader(args[1]);
-                        modificador = args[0].Split("-n");
-                        numMod = int.Parse(modificador[1]);
-                        for (int i = 0; i < numMod; i++)
+                        using (StreamReader sr = new StreamReader(args[1]))
                         {
-                            string linea = sr.ReadLine();
-                            if (linea != null)
+                            modificador = args[0].Split("-n");
+                            string linea = "";
+                            if (int.TryParse(Console.ReadLine(), out numMod))
                             {
-                                Console.WriteLine(linea);
+                                for (int i = 0; i < numMod && linea != null; i++)
+                                {
+                                    linea = sr.ReadLine();
+                                    Console.WriteLine(linea);
+                                }
                             }
                         }
                     }
-                    sr.Close();
                 }
                 else
                 {
                     Console.WriteLine("No hay nada");
                 }
             }
-            catch (FileNotFoundException)
+            catch (IOException)
             {
                 Console.WriteLine("NO EXISTE EL ARCHIVO");
             }

@@ -2,7 +2,7 @@
   "profiles": {
     "BoletinArchivosDelegadosLambdas": {
       "commandName": "Project",
-      "commandLineArgs": "-n18 \"C:\\Users\\Diego Costa\\Desktop\\Acceso\\Primer Tema\\archivoUnion.txt\""
+      "commandLineArgs": "-a \"C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\myfile.txt\" \"And this one is added.\""
     }
   }
 }

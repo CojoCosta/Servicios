@@ -11,7 +11,8 @@ namespace BoletinArchivosDelegadosLambdas
         static void Main(string[] args)
         {
             //Ejercicio1A.funcionLs(args);
-            Ejercicio1B.funcionCat(args);
+            //Ejercicio1B.funcionCat(args);
+            //Ejercicio1C.newFile(args);
         }
     }
 }

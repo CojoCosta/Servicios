@@ -1,0 +1,2 @@
+This text goes in the myfile.
+And this one is added.

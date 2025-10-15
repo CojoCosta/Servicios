@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BoletinArchivosDelegadosLambdas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2389afd5a2b888bfebc3a5a9723d1be6eee084b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abc753441670a77fdd921d212a07a0dba9c14e88")]
 [assembly: System.Reflection.AssemblyProductAttribute("BoletinArchivosDelegadosLambdas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BoletinArchivosDelegadosLambdas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
