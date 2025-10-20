@@ -33,9 +33,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas.csproj",
-      "projectName": "BoletinArchivosDelegadosLambdas",
-      "projectPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas.csproj",
+      "projectUniqueName": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\Ejercicio1.csproj",
+      "projectName": "Ejercicio1",
+      "projectPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\Ejercicio1.csproj",
       "packagesPath": "C:\\Users\\Diego Costa\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\obj\\",
       "projectStyle": "PackageReference",

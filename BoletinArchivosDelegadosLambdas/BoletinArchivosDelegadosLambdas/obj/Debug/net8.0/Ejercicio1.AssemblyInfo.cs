@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("BoletinArchivosDelegadosLambdas")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Ejercicio1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04438398a2d67574d61660177837e098b1ac905b")]
-[assembly: System.Reflection.AssemblyProductAttribute("BoletinArchivosDelegadosLambdas")]
-[assembly: System.Reflection.AssemblyTitleAttribute("BoletinArchivosDelegadosLambdas")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ff17c5fab9b0643039ac7dcf09af3fb45ea8457")]
+[assembly: System.Reflection.AssemblyProductAttribute("Ejercicio1")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Ejercicio1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

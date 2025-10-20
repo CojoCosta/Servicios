@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\Desktop\Desarrollo de interfaces\1ªEvaluacion\Boletín 1\Boletin123\Ejercicio7\Ejercicio7.csproj" />
+  </ItemGroup>
+
 </Project>
