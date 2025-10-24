@@ -17,7 +17,7 @@
                     Console.SetCursorPosition(1, 1);
                     Console.Write("{0,4}", i);
                     i++;
-                    Thread.Sleep(100);
+                    Thread.Sleep(10);
                     if (i >= 1000)
                     {
                         running = false;
@@ -36,7 +36,7 @@
                     Console.SetCursorPosition(1, 20);
                     Console.Write("{0,4}", i);
                     i++;
-                    Thread.Sleep(1000);
+                    Thread.Sleep(10);
                     if (i >= 1000)
                     {
                         running = false;
