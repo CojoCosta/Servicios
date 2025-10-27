@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -65,6 +66,23 @@ namespace Ejemplo7_Task_
         private void btnSearch_Click(object sender, EventArgs e)
         {
             Init();
+        }
+
+        private readonly HttpClient _httpClient = new HttpClient();
+        private async void button1_Click_1(object sender, EventArgs e)
+        {
+            try // Se puede hacer control de excepciones aquí.
+            {
+                textBox2.Text = await _httpClient.GetStringAsync(textBox1.Text);
+            }
+            catch (HttpRequestException ex)
+            {
+                textBox2.Text = $"Error de conexión: {ex.Message}";
+            }
+            catch (Exception ex)
+            {
+                textBox2.Text = $"Error inesperado: {ex.Message}";
+            }
         }
     }
 }
