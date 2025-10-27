@@ -34,16 +34,27 @@
         }
         static void Main(string[] args)
         {
-            Thread thread1 = new Thread(() => factorial(20));
-            Thread thread2 = new Thread(factorialWrapper);
-            Thread thread3 = new Thread(() => addition(44, 23));
-            thread1.Name = "Factorial";
-            thread2.Name = "FactorialWrapper";
-            thread3.Name = "Addition";
-            thread1.Start();
-            thread2.Start(20);
-            thread3.Start();
-            Console.ReadKey();
+            //Thread thread1 = new Thread(() => factorial(20));
+            //Thread thread2 = new Thread(factorialWrapper);
+            //Thread thread3 = new Thread(() => addition(44, 23));
+            //thread1.Name = "Factorial";
+            //thread2.Name = "FactorialWrapper";
+            //thread3.Name = "Addition";
+            //thread1.Start();
+            //thread2.Start(20);
+            //thread3.Start();
+            //Console.ReadKey();
+
+            for (char i = 'A'; i < 'D'; i++)
+            {
+                char oneChar = i;//variable temporal necesaria para guardar bien un dato
+                new Thread(() =>
+                {
+                    for (int j = 0; j < 5; j++)
+                        Console.Write(oneChar);
+                        //Console.Write(i);//Asi va mal, escribe el ultimo valor de i en todos los hilos
+                }).Start();
+            }
         }
     }
 }
