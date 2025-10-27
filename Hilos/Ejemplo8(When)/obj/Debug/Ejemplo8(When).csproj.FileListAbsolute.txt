@@ -8,3 +8,4 @@ C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\obj\D
 C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\obj\Debug\Ejemplo8(When).csproj.CoreCompileInputs.cache
 C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\obj\Debug\Ejemplo8(When).exe
 C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\obj\Debug\Ejemplo8(When).pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\obj\Debug\Ejemplo8(When).exe.config

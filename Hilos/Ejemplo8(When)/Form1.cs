@@ -40,6 +40,34 @@ namespace Ejemplo8_When_
                 $"{Environment.NewLine}");
             }
         }
+        public async Task<string> InitAny()
+        {
+            resultado.Text = $"Buscando el método maás rápido";
+            Random g = new Random();
+            byte[] v = generaVector(); ;
+            Task<string> task1 = Task.Run(() => $"SlowFind: {SlowFind(1, v)}");
+            Task<string> task2 = Task.Run(() => $"SlowFindSleep: {SlowFindSleep(1, v)}");
+            // Si a IndexOf le pasas 1 sin casting busca un integer que no existe.
+            Task<string> task3 = Task.Run(() => $"IndexOf: {Array.IndexOf(v, (byte)1)}");
+            // Hay doble await porque WhenAny es del tipo Task<Task<string>>
+            // - Task interior: representa "la tarea que terminó primero"
+            // - Task exterior: representa "El dato que contiene esa tarea"
+            Task<string> tareaFinal = await Task.WhenAny(task3, task2, task1);
+            return await tareaFinal;
+        }
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            InitAll();
+        }
+        private void btnAny_Click(object sender, EventArgs e)
+        {
+            string ganador = await InitAny();
+            resultado.Text = $"Resultados WhenAny{Environment.NewLine}{ganador}";
+        }
+
+
+
+
         public int SlowFind(int num, byte[] vector)
         {
             Random g = new Random();
@@ -77,9 +105,5 @@ namespace Ejemplo8_When_
             return v;
         }
 
-        private void btnAll_Click(object sender, EventArgs e)
-        {
-            InitAll();
-        }
     }
 }
