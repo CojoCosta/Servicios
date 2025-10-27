@@ -51,6 +51,7 @@
             this.btnAll.TabIndex = 1;
             this.btnAll.Text = "WhenAll";
             this.btnAll.UseVisualStyleBackColor = true;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // btnAny
             // 

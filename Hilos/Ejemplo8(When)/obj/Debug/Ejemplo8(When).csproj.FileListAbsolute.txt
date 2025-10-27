@@ -1,0 +1,10 @@
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\bin\Debug\Ejemplo8(When).exe.config
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\bin\Debug\Ejemplo8(When).exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\bin\Debug\Ejemplo8(When).pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\obj\Debug\Ejemplo8(When).csproj.AssemblyReference.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\obj\Debug\Ejemplo8_When_.Form1.resources
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\obj\Debug\Ejemplo8_When_.Properties.Resources.resources
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\obj\Debug\Ejemplo8(When).csproj.GenerateResource.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\obj\Debug\Ejemplo8(When).csproj.CoreCompileInputs.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\obj\Debug\Ejemplo8(When).exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo8(When)\obj\Debug\Ejemplo8(When).pdb
