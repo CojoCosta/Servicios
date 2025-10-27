@@ -1,0 +1,11 @@
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo7(Task)\bin\Debug\Ejemplo7(Task).exe.config
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo7(Task)\bin\Debug\Ejemplo7(Task).exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo7(Task)\bin\Debug\Ejemplo7(Task).pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo7(Task)\obj\Debug\Ejemplo7(Task).csproj.AssemblyReference.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo7(Task)\obj\Debug\Ejemplo7_Task_.Form1.resources
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo7(Task)\obj\Debug\Ejemplo7_Task_.Properties.Resources.resources
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo7(Task)\obj\Debug\Ejemplo7(Task).csproj.GenerateResource.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo7(Task)\obj\Debug\Ejemplo7(Task).csproj.CoreCompileInputs.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo7(Task)\obj\Debug\Ejemplo7(Task).exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo7(Task)\obj\Debug\Ejemplo7(Task).pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo7(Task)\obj\Debug\Ejemplo7(Task).exe.config
