@@ -1,0 +1,15 @@
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\bin\Debug\net8.0\Ejemplo3.exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\bin\Debug\net8.0\Ejemplo3.deps.json
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\bin\Debug\net8.0\Ejemplo3.runtimeconfig.json
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\bin\Debug\net8.0\Ejemplo3.dll
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\bin\Debug\net8.0\Ejemplo3.pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\obj\Debug\net8.0\Ejemplo3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\obj\Debug\net8.0\Ejemplo3.AssemblyInfoInputs.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\obj\Debug\net8.0\Ejemplo3.AssemblyInfo.cs
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\obj\Debug\net8.0\Ejemplo3.csproj.CoreCompileInputs.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\obj\Debug\net8.0\Ejemplo3.sourcelink.json
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\obj\Debug\net8.0\Ejemplo3.dll
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\obj\Debug\net8.0\refint\Ejemplo3.dll
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\obj\Debug\net8.0\Ejemplo3.pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\obj\Debug\net8.0\Ejemplo3.genruntimeconfig.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\Hilos\Ejemplo3\obj\Debug\net8.0\ref\Ejemplo3.dll
