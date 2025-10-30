@@ -67,7 +67,7 @@
         static void Main(string[] args)
         {
             MenuGenerator(new string[] { "Op1", "Op2", "Op3" },
-            new MyDelegate[] { f1, f2, f3 });
+            new MyDelegate[] { () => Console.WriteLine("A"), ()=> Console.WriteLine("B"), ()=> Console.WriteLine("C") });
             Console.ReadKey();
         }
     }
