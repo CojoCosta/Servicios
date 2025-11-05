@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        
+
         public static int pedirEntero()
         {
             bool flag;
@@ -23,34 +23,46 @@
             return numero;
         }
         public delegate void MyDelegate();
-        public static bool MenuGenerator(String[] opciones, MyDelegate[] funciones)
+        public static bool MenuGenerator(String[] opciones, MyDelegate[] funciones)//TODO comprobaciones
         {
             int opcion;
-
-            do
+            if (opciones is null || funciones is null)
             {
-                for (int i = 0; i < opciones.Length; i++)
-                {
-                    Console.WriteLine($"{i+1}.- {opciones[i]}");
-                }
-                Console.WriteLine($"{opciones.Length + 1} Salir");
-                Console.WriteLine("Elige una opcion: ");
-                opcion = pedirEntero();
-                if (opcion >= 1 && opcion <= opciones.Length)
-                {
-                    funciones[opcion - 1]();
-                }
-                else if (opcion == opciones.Length + 1)
-                {
-                    Console.WriteLine("Gracias por usar el programa");
-                }
-                else
-                {
-                    Console.WriteLine("Opcion no válida");
-                }
+                Console.WriteLine("Hay parámetros null");
+                return false;
             }
-            while (opcion != opciones.Length +1);
-            return true;
+            else if(opciones.Length != funciones.Length || opciones.Contains(null) || opciones.Contains(null))
+            {
+                Console.WriteLine("Longitud de opciones y funciones diferentes");
+                return false;
+            }
+            else
+            {
+                do
+                {
+                    for (int i = 0; i < opciones.Length; i++)
+                    {
+                        Console.WriteLine($"{i + 1}.- {opciones[i]}");
+                    }
+                    Console.WriteLine($"{opciones.Length + 1} Salir");
+                    Console.WriteLine("Elige una opcion: ");
+                    opcion = pedirEntero();
+                    if (opcion >= 1 && opcion <= opciones.Length)
+                    {
+                        funciones[opcion - 1]();
+                    }
+                    else if (opcion == opciones.Length + 1)
+                    {
+                        Console.WriteLine("Gracias por usar el programa");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Opcion no válida");
+                    }
+                }
+                while (opcion != opciones.Length + 1);
+                return true;
+            }
         }
         static void f1()
         {
@@ -66,8 +78,8 @@
         }
         static void Main(string[] args)
         {
-            MenuGenerator(new string[] { "Op1", "Op2", "Op3" },
-            new MyDelegate[] { () => Console.WriteLine("A"), ()=> Console.WriteLine("B"), ()=> Console.WriteLine("C") });
+            MenuGenerator(new string[] { "Op1", "Op2", "Op3", "Op4" },
+            new MyDelegate[] { () => Console.WriteLine("A"), () => Console.WriteLine("B"), () => Console.WriteLine("C"), () => Console.WriteLine("D") });
             Console.ReadKey();
         }
     }
