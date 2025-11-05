@@ -2,42 +2,45 @@
 
 namespace Ejercicio1
 {
-    internal class Program
+    public class Program
     {
-        static bool running = true;
-        public static void contadorSuma()
-        {
-            int i = 0;
-            while (running)
-            {
-                Console.SetCursorPosition(1, 1);
-                Console.Write(i);
-                i++;
-                if (i>=500)
-                {
-                    running = false;
-                }
-            }
-        }
-        public static void contadorResta()
-        {
-            int i = 500;
-            while (running)
-            {
-                Console.SetCursorPosition(1, 20);
-                Console.Write(i);
-                i--;
-                if (i <= 0)
-                {
-                    running = false;
-                }
-            }
-        }
         static void Main(string[] args)
         {
-            Thread suma = new Thread(contadorSuma);
-            Thread resta = new Thread(contadorResta);
-           
+            bool running = true;
+            int i = 0;
+            Thread suma = new Thread(() =>
+            {
+                while (running)
+                {
+                    if (running)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write(i);
+                        i++;
+                        if (i >= 500)
+                        {
+                            running = false;
+                        }
+                    }
+                }
+            });
+            Thread resta = new Thread(() =>
+            {
+                while (running)
+                {
+                    if (running)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write(i);
+                        i--;
+                        if (i <= -500)
+                        {
+                            running = false;
+                        }
+                    }
+                }
+            });
+
             resta.Start();
             suma.Start();
         }
