@@ -2,7 +2,7 @@
 
 namespace Ejercicio1
 {
-    public class Program
+    public class Program//TODO el main espera y luego indica quien gana. Uso de locks y mas cosas...
     {
         static void Main(string[] args)
         {
