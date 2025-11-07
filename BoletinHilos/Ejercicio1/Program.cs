@@ -4,6 +4,7 @@ namespace Ejercicio1
 {
     public class Program//TODO el main espera y luego indica quien gana. Uso de locks y mas cosas...
     {
+        static readonly object l = new object();
         static void Main(string[] args)
         {
             bool running = true;
@@ -12,14 +13,18 @@ namespace Ejercicio1
             {
                 while (running)
                 {
-                    if (running)
+                    lock (l)
                     {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write(i);
-                        i++;
-                        if (i >= 500)
+                        if (running)
                         {
-                            running = false;
+                            if (i > 499)
+                            {
+                                running = false;
+                                break;
+                            }
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            i++;
+                            Console.Write($"{i,10}");
                         }
                     }
                 }
@@ -28,21 +33,28 @@ namespace Ejercicio1
             {
                 while (running)
                 {
-                    if (running)
+                    lock (l)
                     {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write(i);
-                        i--;
-                        if (i <= -500)
+                        if (running)
                         {
-                            running = false;
+                            if (i < -499)
+                            {
+                                running = false;
+                                break;
+                            }
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            i--;
+                            Console.Write($"{i,10}");
                         }
                     }
                 }
             });
-
             resta.Start();
             suma.Start();
+            resta.Join();
+            suma.Join();
+            Console.WriteLine();
+            Console.WriteLine($"El ganador es : ");
         }
     }
 }
