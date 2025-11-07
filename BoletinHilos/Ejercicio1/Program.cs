@@ -17,14 +17,13 @@ namespace Ejercicio1
                     {
                         if (running)
                         {
-                            if (i > 499)
-                            {
-                                running = false;
-                                break;
-                            }
                             Console.ForegroundColor = ConsoleColor.Green;
                             i++;
                             Console.Write($"{i,10}");
+                            if (i > 499)
+                            {
+                                running = false;
+                            }
                         }
                     }
                 }
@@ -37,14 +36,13 @@ namespace Ejercicio1
                     {
                         if (running)
                         {
-                            if (i < -499)
-                            {
-                                running = false;
-                                break;
-                            }
                             Console.ForegroundColor = ConsoleColor.Red;
                             i--;
                             Console.Write($"{i,10}");
+                            if (i < -499)
+                            {
+                                running = false;
+                            }
                         }
                     }
                 }
@@ -53,8 +51,16 @@ namespace Ejercicio1
             suma.Start();
             resta.Join();
             suma.Join();
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine();
-            Console.WriteLine($"El ganador es : ");
+            if (i == 500)
+            {
+                Console.WriteLine($"El ganador es : Verde");
+            }
+            else
+            {
+                Console.WriteLine($"El ganador es : Rojo");
+            }
         }
     }
 }
