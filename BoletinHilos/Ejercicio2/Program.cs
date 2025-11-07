@@ -2,6 +2,7 @@
 {
     internal class Program
     {
+        static string bicho = ",-,^·";
         public static int pedirEntero()
         {
             bool flag = true;
@@ -21,12 +22,24 @@
             } while (!flag);
             return numero;
         }
+        public static void carrera(object caballo)
+        {
+            Random rd = new Random();
+            int x = rd.Next(1, 11);
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine(bicho);
+                Console.SetCursorPosition(x, 1);
+                x += x;
+            }
+
+        }
         static void Main(string[] args)
         {
             int jugar = 0;
             do
             {
-                Thread[] caballos; ;
+                Thread[] caballos = new Thread[5];
                 int eleccion;
                 Console.WriteLine("~~~~BIENVENIDO AL HIPÓDROMO VIVAS~~~~");
                 do
@@ -34,11 +47,13 @@
                     Console.WriteLine("Elige un caballo (1-5)");
                     eleccion = pedirEntero();
                 } while (eleccion < 1 || eleccion > 5);
-
-                for (int i = 0; i < caballos.Length; i++)
+                for (int i = 0; i < 5; i++)
                 {
+                    caballos[i] = new Thread(carrera);
                     caballos[i].Start();
                 }
+                Console.ReadKey();
+
 
 
                 Console.WriteLine("Quieres volver a perder tu dinero¿?");
