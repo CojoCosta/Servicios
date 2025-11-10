@@ -22,14 +22,14 @@
             } while (!flag);
             return numero;
         }
-        public static void carrera(object caballo)
+        public static void carrera()
         {
             Random rd = new Random();
             int x = rd.Next(1, 11);
             for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine(bicho);
-                Console.SetCursorPosition(x, 1);
+                Console.SetCursorPosition(x, 10);
                 x += x;
             }
 
@@ -52,8 +52,11 @@
                     caballos[i] = new Thread(carrera);
                     caballos[i].Start();
                 }
+                for (int i = 0; i < caballos.Length; i++)
+                {
+                    
+                }
                 Console.ReadKey();
-
 
 
                 Console.WriteLine("Quieres volver a perder tu dinero¿?");
