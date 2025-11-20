@@ -1,6 +1,6 @@
 ﻿namespace Ejercicio2
 {
-    internal class Program//REvisar confición de carrera, repetición de carrera
+    internal class Program//Revisar condición de carrera, repetición de carrera
     {
         static string bicho = ",O,^·";
         static bool running = true;
