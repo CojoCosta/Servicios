@@ -13,3 +13,6 @@ C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio2\ob
 C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio2\obj\Debug\net8.0\Ejercicio2.pdb
 C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio2\obj\Debug\net8.0\Ejercicio2.genruntimeconfig.cache
 C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio2\obj\Debug\net8.0\ref\Ejercicio2.dll
+C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio2\obj\Debug\net8.0\Ejercicio2.dll
+C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio2\obj\Debug\net8.0\refint\Ejercicio2.dll
+C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio2\obj\Debug\net8.0\Ejercicio2.pdb

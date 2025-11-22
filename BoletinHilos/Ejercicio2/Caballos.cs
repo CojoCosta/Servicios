@@ -56,11 +56,11 @@
             first = -1;
             int jugar = 0;
             Thread[] caballos;
-            running = true;
             int y = 1;
             int ganador;
             do
             {
+                running = true;
                 int eleccion;
                 Console.WriteLine("~~~~BIENVENIDO AL HIPÓDROMO VIVAS~~~~");
                 do
