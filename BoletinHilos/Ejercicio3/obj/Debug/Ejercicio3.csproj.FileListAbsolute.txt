@@ -8,3 +8,4 @@ C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercici
 C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.csproj.CoreCompileInputs.cache
 C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.exe
 C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.pdb
+C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.exe.config
