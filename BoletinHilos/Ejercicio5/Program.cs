@@ -2,53 +2,61 @@
 {
     internal class Program
     {
-        public static Random random = new Random();
-        public static int getRandomNumber(int min, int max)
+        public static Random rd = new Random();
+        public static int numeroRandom(int min, int max)
         {
-            return random.Next(min, max);
+            return rd.Next(min, max);
         }
 
-        public static List<int> listaNumeros = new List<int>();
-        public static int contadorPrimos = 0;
-        public static bool productorRunning = true;
-        public static object semaforo = new object();
-        public static void fnProductor()
+        public static List<int> numeros = new List<int>();
+        public static int contPrimos = 0;
+        public static bool runnning = true;
+        public static object l = new object();
+        public static void Productor()
         {
-            while (productorRunning)
+            while (runnning)
             {
-                lock (semaforo)
+                lock (l)
                 {
-                    if (productorRunning)
+                    if (runnning)
                     {
-                        int numero = getRandomNumber(1000, 10000);
+                        int numero = numeroRandom(1000, 10001);
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine(numero);
-                        listaNumeros.Add(numero);
+                        numeros.Add(numero);
                     }
                 }
             }
         }
 
-        public static void fnConsumidor()
+        public static void Consumidor()
         {
-            while (productorRunning && listaNumeros.Count > 0)
+            //while (runnning)
             {
-                lock (semaforo)
+                while (runnning||numeros.Count > 0)
                 {
-                    int numero = listaNumeros[0];
-                    listaNumeros.RemoveAt(0);
-                    if (esPrimo(numero))
+                    lock (l)
                     {
-                        contadorPrimos++;
-                        if (contadorPrimos == 5)
+                    //            Console.ForegroundColor = ConsoleColor.Green;
+                    //Console.WriteLine(runnning);
+                    //Console.WriteLine(numeros.Count
+                    //    );
+                        int numero = numeros[0];
+                        numeros.RemoveAt(0);
+                        if (esPrimo(numero))
                         {
-                            contadorPrimos = 0;
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("He detectado 5 primos");
-                            productorRunning = false;
+                            contPrimos++;
+
+                            if (contPrimos == 5)
+                            {
+                                contPrimos = 0;
+                                Console.WriteLine("5 primos!");
+                                runnning = false;
+                            }
                         }
                     }
                 }
+                Thread.Sleep(50);
             }
         }
 
@@ -66,8 +74,10 @@
 
         static void Main(string[] args)
         {
-            Thread productor = new Thread(fnProductor);
-            Thread consumidor = new Thread(fnConsumidor);
+            Thread productor = new Thread(Productor);
+            Thread consumidor = new Thread(Consumidor);
+
+            productor.Priority = ThreadPriority.Highest;
 
             productor.Start();
             consumidor.Start();
@@ -76,6 +86,7 @@
             consumidor.Join();
 
             Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(numeros.Count);
         }
     }
 }
