@@ -1,0 +1,10 @@
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\ClienteEco\bin\Debug\ClienteEco.exe.config
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\ClienteEco\bin\Debug\ClienteEco.exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\ClienteEco\bin\Debug\ClienteEco.pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\ClienteEco\obj\Debug\ClienteEco.csproj.AssemblyReference.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\ClienteEco\obj\Debug\ClienteEco.Form1.resources
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\ClienteEco\obj\Debug\ClienteEco.Properties.Resources.resources
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\ClienteEco\obj\Debug\ClienteEco.csproj.GenerateResource.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\ClienteEco\obj\Debug\ClienteEco.csproj.CoreCompileInputs.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\ClienteEco\obj\Debug\ClienteEco.exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\ClienteEco\obj\Debug\ClienteEco.pdb

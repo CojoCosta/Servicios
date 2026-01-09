@@ -1,0 +1,15 @@
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\bin\Debug\net8.0\TemaNetworking.exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\bin\Debug\net8.0\TemaNetworking.deps.json
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\bin\Debug\net8.0\TemaNetworking.runtimeconfig.json
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\bin\Debug\net8.0\TemaNetworking.dll
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\bin\Debug\net8.0\TemaNetworking.pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\obj\Debug\net8.0\TemaNetworking.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\obj\Debug\net8.0\TemaNetworking.AssemblyInfoInputs.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\obj\Debug\net8.0\TemaNetworking.AssemblyInfo.cs
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\obj\Debug\net8.0\TemaNetworking.csproj.CoreCompileInputs.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\obj\Debug\net8.0\TemaNetworking.sourcelink.json
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\obj\Debug\net8.0\TemaNetworking.dll
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\obj\Debug\net8.0\refint\TemaNetworking.dll
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\obj\Debug\net8.0\TemaNetworking.pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\obj\Debug\net8.0\TemaNetworking.genruntimeconfig.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Desarrollo-de-interfaces\1ªEvaluacion\Servicios2\TemaNetworking\obj\Debug\net8.0\ref\TemaNetworking.dll
