@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Desarrollo-de-interfaces\\1ªEvaluacion\\Servicios2\\ServidorHilos\\ServidorHilos.csproj": {}
+    "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\Servicios2\\ServidorHilos\\ServidorHilos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Desarrollo-de-interfaces\\1ªEvaluacion\\Servicios2\\ServidorHilos\\ServidorHilos.csproj": {
+    "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\Servicios2\\ServidorHilos\\ServidorHilos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Desarrollo-de-interfaces\\1ªEvaluacion\\Servicios2\\ServidorHilos\\ServidorHilos.csproj",
+        "projectUniqueName": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\Servicios2\\ServidorHilos\\ServidorHilos.csproj",
         "projectName": "ServidorHilos",
-        "projectPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Desarrollo-de-interfaces\\1ªEvaluacion\\Servicios2\\ServidorHilos\\ServidorHilos.csproj",
+        "projectPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\Servicios2\\ServidorHilos\\ServidorHilos.csproj",
         "packagesPath": "C:\\Users\\Diego Costa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Desarrollo-de-interfaces\\1ªEvaluacion\\Servicios2\\ServidorHilos\\obj\\",
+        "outputPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\Servicios2\\ServidorHilos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

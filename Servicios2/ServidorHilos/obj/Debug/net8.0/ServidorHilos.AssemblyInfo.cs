@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServidorHilos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c809ba5ac85c963d24e3a4a0a33e54376fa4c67c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+936ad54e5d2f67cd7cfac0e428644c31d8fb7de4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServidorHilos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServidorHilos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
