@@ -4,8 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine((new Servidor1()).Password("password"));
-            //(new Servidor1()).InitServer();
+            (new Servidor1()).InitServer();
         }
     }
 }
