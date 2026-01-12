@@ -46,9 +46,9 @@ namespace Ejercicio1
                 using (StreamWriter sw = new StreamWriter(ns))
                 {
                     sw.AutoFlush = true;
+                    string pass = Password();
                     string welcome = "Welcome to my server";
                     sw.WriteLine(welcome);
-                    string pass = Password();
                     string? msg = "";
                     string comando;
                     DateTime fechaYHora;
@@ -120,7 +120,7 @@ namespace Ejercicio1
                     {
                         sr = new StreamReader(doc.FullName);
                         passRead = sr.ReadToEnd();
-                        
+                        return passRead;
                     }
                 }
             }
