@@ -8,6 +8,7 @@ namespace Ejercicio1
     public class Servidor1
     {
         public bool ServerRunning { set; get; } = true;
+        public int[] Port1 { get; set; } = { 31416, 31417, 31418 };
         public int Port { get; set; } = 31416;
         public void InitServer()
         {
@@ -27,9 +28,9 @@ namespace Ejercicio1
                         hilo.Start();
                     }
                 }
-                catch (SocketException ex)
+                catch (SocketException e) when(e.ErrorCode == (int)SocketError.AddressAlreadyInUse)
                 {
-                    Console.WriteLine("Servidor cerrado");
+                    Console.WriteLine("Servidor cerrado \nPuerto en uso");
                 }
             }
         }
@@ -47,36 +48,53 @@ namespace Ejercicio1
                     sw.AutoFlush = true;
                     string welcome = "Welcome to my server";
                     sw.WriteLine(welcome);
+                    string pass = Password();
                     string? msg = "";
+                    string comando;
+                    DateTime fechaYHora;
                     try
                     {
-                        //msg = sr.ReadLine();
+                        msg = sr.ReadLine();
+                        comando = msg.Split(" ")[0];
                         if (msg != null)
                         {
-                            if (msg != "time" || msg != "date" || msg != "all" || msg != "close")
+                            switch (comando)
                             {
-                                Console.WriteLine($"Error de comando: {msg}");
+                                case "Time":
+                                    fechaYHora = DateTime.Now;
+                                    sw.WriteLine(fechaYHora.ToString("HH:mm:ss"));
+                                    break;
+                                case "Date":
+                                    fechaYHora = DateTime.Now;
+                                    sw.WriteLine(fechaYHora.ToString("dd/MM/yyyy"));
+                                    break;
+                                case "All":
+                                    fechaYHora = DateTime.Now;
+                                    sw.WriteLine(fechaYHora.ToString("dd/MM/yyyy -- HH:mm:ss"));
+                                    break;
+                                case "Close":
+                                    if (msg == $"Close {pass}")
+                                    {
+                                        ServerRunning = false;
+                                    }
+                                    else
+                                    {
+                                        if (msg.Trim() == "Close")
+                                        {
+                                            sw.WriteLine("No ha escrito ninguna contraseña");
+                                        }
+                                        else
+                                        {
+                                            sw.WriteLine("Contraseña incorrecta");
+                                        }
+                                    }
+                                    break;
+
+                                default:
+                                    Console.WriteLine($"Error de comando: {msg}");
+                                    break;
                             }
-
-                        }
-                        else
-                        {
-                            switch (msg)
-                            {
-                                case "time":
-                                    //DateTime
-                                    break;
-                                case "date":
-                                    //DataSetDateTime
-
-                                    break;
-                                case "all":
-
-                                    break;
-                                case "close":
-
-                                    break;
-                            }
+                            Console.WriteLine($"El cliente dijo: {msg}");
                         }
                     }
                     catch (IOException ex)
@@ -88,8 +106,8 @@ namespace Ejercicio1
             }
         }
         string programdata = Environment.GetEnvironmentVariable("Programdata");
-        string pass = "";
-        public void Password(string contra)
+        string passRead = "";
+        public string Password()
         {
             try
             {
@@ -101,15 +119,16 @@ namespace Ejercicio1
                     if (doc.FullName == "password.txt")
                     {
                         sr = new StreamReader(doc.FullName);
-                        pass = sr.ReadToEnd();
+                        passRead = sr.ReadToEnd();
+                        
                     }
                 }
             }
-            catch (FileNotFoundException ex)
+            catch (Exception ex) when (ex is FileNotFoundException || ex is IOException)
             {
                 Console.WriteLine("Error de archivo");
             }
-
+            return passRead;
         }
     }
 }

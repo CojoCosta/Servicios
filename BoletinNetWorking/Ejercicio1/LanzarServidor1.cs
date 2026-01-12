@@ -1,8 +1,8 @@
 ﻿namespace Ejercicio1
 {
-    internal class LanzarServidorEj1
+    internal class LanzarServidor1
     {
-        static void main(String[] args)
+        public static void Main(string[] args)
         {
             (new Servidor1()).InitServer();
         }
