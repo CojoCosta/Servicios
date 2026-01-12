@@ -28,7 +28,7 @@ namespace Ejercicio1
                         hilo.Start();
                     }
                 }
-                catch (SocketException e) when(e.ErrorCode == (int)SocketError.AddressAlreadyInUse)
+                catch (SocketException e) when (e.ErrorCode == (int)SocketError.AddressAlreadyInUse)
                 {
                     Console.WriteLine("Servidor cerrado \nPuerto en uso");
                 }
@@ -46,7 +46,7 @@ namespace Ejercicio1
                 using (StreamWriter sw = new StreamWriter(ns))
                 {
                     sw.AutoFlush = true;
-                    string pass = Password();
+                    string pass = Password("password");
                     string welcome = "Welcome to my server";
                     sw.WriteLine(welcome);
                     string? msg = "";
@@ -107,21 +107,16 @@ namespace Ejercicio1
         }
         string programdata = Environment.GetEnvironmentVariable("Programdata");
         string passRead = "";
-        public string Password()
+        public string Password(string fileName)
         {
             try
             {
-                StreamReader sr;
-                Directory.SetCurrentDirectory(programdata);
-                DirectoryInfo dir = new DirectoryInfo(Directory.GetCurrentDirectory());
-                foreach (FileInfo doc in dir.GetFiles())
+                string path = $"{Environment.GetEnvironmentVariable("programdata")}\\{fileName}.txt";
+                DirectoryInfo dir = new DirectoryInfo(programdata);
+                using (StreamReader sr = new StreamReader(path))
                 {
-                    if (doc.FullName == "password.txt")
-                    {
-                        sr = new StreamReader(doc.FullName);
-                        passRead = sr.ReadToEnd();
-                        return passRead;
-                    }
+                    passRead = sr.ReadToEnd();
+                    return passRead;
                 }
             }
             catch (Exception ex) when (ex is FileNotFoundException || ex is IOException)
