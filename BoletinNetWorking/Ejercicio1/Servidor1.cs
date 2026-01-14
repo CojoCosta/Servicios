@@ -5,35 +5,71 @@ using System.Text;
 
 namespace Ejercicio1
 {
-    public class Servidor1
+    public class Servidor1//puertos ocupados  
     {
+        static readonly object l = new();
         public bool ServerRunning { set; get; } = true;
-        public int[] Port1 { get; set; } = { 31416, 31417, 31418 };
-        public int Port { get; set; } = 31416;
+        public int[] Port1 { get; set; } = { 135, 135, 31416 };
+        //public int Port { get; set; } = 135;
+        Socket s;
+        TcpListener listener = null;
+        public (bool, int) puertoEnUso(int[] puertos)
+        {
+            int j = 0;
+            bool flag = true;
+            try
+            {
+                IPEndPoint comprobacion;
+                while (flag)
+                {
+                    comprobacion = new IPEndPoint(IPAddress.Any, puertos[j]);
+                    s.Connect(comprobacion);
+                    flag = false;
+                    s.Close();
+                    j++;
+                }
+            }
+            catch (NullReferenceException e)
+            {
+                
+            }
+            return (true, puertos[j]);
+        }
         public void InitServer()
         {
-            IPEndPoint ie = new IPEndPoint(IPAddress.Any, Port);
-            using (Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
+
+
+            using (s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
             {
-                s.Bind(ie);
-                s.Listen(10);
-                Console.WriteLine($"Servidor iniciado. " + $"Escuchando en {ie.Address}:{ie.Port}");
-                Console.WriteLine("Esperando conexiones... (Ctrl+C para salir)");
                 try
                 {
-                    while (ServerRunning)
+                    if (puertoEnUso(Port1).Item1)
                     {
-                        Socket cliente = s.Accept();
-                        Thread hilo = new Thread(() => ProtocoloCliente(cliente));
-                        hilo.Start();
+                        IPEndPoint ie = new IPEndPoint(IPAddress.Any, puertoEnUso(Port1).Item2);
+                        s.Bind(ie);
+                        s.Listen(10);
+                        Console.WriteLine($"Servidor iniciado. " + $"Escuchando en {ie.Address}:{ie.Port}");
+                        Console.WriteLine("Esperando conexiones... (Ctrl+C para salir)");
+                        while (ServerRunning)
+                        {
+                            Socket cliente = s.Accept();
+                            Thread hilo = new Thread(() => ProtocoloCliente(cliente));
+                            hilo.IsBackground = true;
+                            hilo.Start();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Puerto en uso");
                     }
                 }
-                catch (SocketException e) when (e.ErrorCode == (int)SocketError.AddressAlreadyInUse)
+                catch (SocketException e)
                 {
                     Console.WriteLine("Servidor cerrado \nPuerto en uso");
                 }
             }
         }
+
         public void ProtocoloCliente(Socket sCliente)
         {
             using (sCliente)
@@ -55,31 +91,32 @@ namespace Ejercicio1
                     try
                     {
                         msg = sr.ReadLine();
-                        comando = msg.Split(" ")[0];
                         if (msg != null)
                         {
-                            switch (comando)
+                            comando = msg.Split(" ")[0];
+                            switch (comando.Trim())
                             {
-                                case "Time":
+                                case "time":
                                     fechaYHora = DateTime.Now;
                                     sw.WriteLine(fechaYHora.ToString("HH:mm:ss"));
                                     break;
-                                case "Date":
+                                case "date":
                                     fechaYHora = DateTime.Now;
                                     sw.WriteLine(fechaYHora.ToString("dd/MM/yyyy"));
                                     break;
-                                case "All":
+                                case "all":
                                     fechaYHora = DateTime.Now;
                                     sw.WriteLine(fechaYHora.ToString("dd/MM/yyyy -- HH:mm:ss"));
                                     break;
-                                case "Close":
-                                    if (msg == $"Close {pass}")
+                                case "close":
+                                    if (msg == $"close {pass}")
                                     {
                                         ServerRunning = false;
+                                        s.Close();
                                     }
                                     else
                                     {
-                                        if (msg.Trim() == "Close")
+                                        if (msg.Trim() == "close")
                                         {
                                             sw.WriteLine("No ha escrito ninguna contraseña");
                                         }
@@ -94,10 +131,10 @@ namespace Ejercicio1
                                     Console.WriteLine($"Error de comando: {msg}");
                                     break;
                             }
-                            Console.WriteLine($"El cliente dijo: {msg}");
+                            Console.WriteLine($"El cliente escribió: {msg}");
                         }
                     }
-                    catch (IOException ex)
+                    catch (Exception ex) when (ex is IOException || ex is SocketException)
                     {
                         msg = null;
                     }
@@ -119,7 +156,8 @@ namespace Ejercicio1
                     return passRead;
                 }
             }
-            catch (Exception ex) when (ex is FileNotFoundException || ex is IOException)
+            catch (Exception ex) when (ex is FileNotFoundException || ex is IOException || ex is UnauthorizedAccessException)
+            //unautorized
             {
                 Console.WriteLine("Error de archivo");
             }
