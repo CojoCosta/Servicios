@@ -17,22 +17,22 @@ namespace Ejercicio1
         {
             int j = 0;
             bool flag = true;
-            try
-            {
-                IPEndPoint comprobacion;
-                while (flag)
+            while (flag)
+                try
                 {
-                    comprobacion = new IPEndPoint(IPAddress.Any, puertos[j]);
-                    s.Connect(comprobacion);
-                    flag = false;
-                    s.Close();
-                    j++;
+                    IPEndPoint comprobacion;
+
+                    {
+                        comprobacion = new IPEndPoint(IPAddress.Any, puertos[i]);
+                        s.Connect(comprobacion);
+                        s.Close();
+                        j++;
+                    }
                 }
-            }
-            catch (NullReferenceException e)
-            {
-                
-            }
+                catch (NullReferenceException e)
+                {
+
+                }
             return (true, puertos[j]);
         }
         public void InitServer()
