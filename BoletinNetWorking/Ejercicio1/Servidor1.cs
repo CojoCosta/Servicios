@@ -9,58 +9,53 @@ namespace Ejercicio1
     {
         static readonly object l = new();
         public bool ServerRunning { set; get; } = true;
-        public int[] Port1 { get; set; } = { 135, 135, 31416 };
+        public int[] Port1 { get; set; } = { 135, 135, 1385 };
         //public int Port { get; set; } = 135;
         Socket s;
         TcpListener listener = null;
-        public (bool, int) puertoEnUso(int[] puertos)
+        public int puertoEnUso(int[] puertos)
         {
             int j = 0;
             bool flag = true;
-            while (flag)
-                try
+            while (flag && j < puertos.Length)
+            {
+                using (Socket socketComprobacion = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
                 {
-                    IPEndPoint comprobacion;
-
+                    try
                     {
-                        comprobacion = new IPEndPoint(IPAddress.Any, puertos[i]);
-                        s.Connect(comprobacion);
-                        s.Close();
+                        IPEndPoint comprobacion = new IPEndPoint(IPAddress.Any, puertos[j]);
+                        socketComprobacion.Bind(comprobacion);
+                        socketComprobacion.Listen();
+                        flag = false;
+                        return puertos[j];
+                    }
+                    catch (SocketException ex) when (ex.ErrorCode == (int)SocketError.AddressAlreadyInUse)
+                    {
+                        Console.WriteLine("Sin puerto libre");
                         j++;
                     }
                 }
-                catch (NullReferenceException e)
-                {
-
-                }
-            return (true, puertos[j]);
+            }
+            j--;
+            return puertos[j];
         }
         public void InitServer()
         {
-
-
             using (s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
             {
                 try
                 {
-                    if (puertoEnUso(Port1).Item1)
+                    IPEndPoint ie = new IPEndPoint(IPAddress.Any, puertoEnUso(Port1));
+                    s.Bind(ie);
+                    s.Listen(10);
+                    Console.WriteLine($"Servidor iniciado. " + $"Escuchando en {ie.Address}:{ie.Port}");
+                    Console.WriteLine("Esperando conexiones... (Ctrl+C para salir)");
+                    while (ServerRunning)
                     {
-                        IPEndPoint ie = new IPEndPoint(IPAddress.Any, puertoEnUso(Port1).Item2);
-                        s.Bind(ie);
-                        s.Listen(10);
-                        Console.WriteLine($"Servidor iniciado. " + $"Escuchando en {ie.Address}:{ie.Port}");
-                        Console.WriteLine("Esperando conexiones... (Ctrl+C para salir)");
-                        while (ServerRunning)
-                        {
-                            Socket cliente = s.Accept();
-                            Thread hilo = new Thread(() => ProtocoloCliente(cliente));
-                            hilo.IsBackground = true;
-                            hilo.Start();
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Puerto en uso");
+                        Socket cliente = s.Accept();
+                        Thread hilo = new Thread(() => ProtocoloCliente(cliente));
+                        hilo.IsBackground = true;
+                        hilo.Start();
                     }
                 }
                 catch (SocketException e)
