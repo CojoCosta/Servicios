@@ -7,38 +7,10 @@ namespace Ejercicio1
 {
     public class Servidor1//puertos ocupados  
     {
-        static readonly object l = new();
         public bool ServerRunning { set; get; } = true;
         public int[] Port1 { get; set; } = { 135, 135, 31416};
-        //public int Port { get; set; } = 135;
         Socket s;
-        TcpListener listener = null;
-        public int puertoEnUso(int[] puertos)
-        {
-            int j = 0;
-            bool flag = true;
-            while (flag && j < puertos.Length)
-            {
-                using (Socket socketComprobacion = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
-                {
-                    try
-                    {
-                        IPEndPoint comprobacion = new IPEndPoint(IPAddress.Any, puertos[j]);
-                        socketComprobacion.Bind(comprobacion);
-                        socketComprobacion.Listen();
-                        flag = false;
-                        return puertos[j];
-                    }
-                    catch (SocketException ex) when (ex.ErrorCode == (int)SocketError.AddressAlreadyInUse)
-                    {
-                        Console.WriteLine("Sin puerto libre");
-                        j++;
-                    }
-                }
-            }
-            j--;
-            return puertos[j];
-        }
+
         public void InitServer()
         {
             using (s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
@@ -78,8 +50,6 @@ namespace Ejercicio1
                 {
                     sw.AutoFlush = true;
                     string pass = Password("password");
-                    //string welcome = "Welcome to my server";
-                    //sw.WriteLine(welcome);
                     string? msg = "";
                     string comando;
                     DateTime fechaYHora;
@@ -137,6 +107,34 @@ namespace Ejercicio1
                 }
             }
         }
+
+        public int puertoEnUso(int[] puertos)
+        {
+            int j = 0;
+            bool flag = true;
+            while (flag && j < puertos.Length)
+            {
+                using (Socket socketComprobacion = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
+                {
+                    try
+                    {
+                        IPEndPoint comprobacion = new IPEndPoint(IPAddress.Any, puertos[j]);
+                        socketComprobacion.Bind(comprobacion);
+                        socketComprobacion.Listen();
+                        flag = false;
+                        return puertos[j];
+                    }
+                    catch (SocketException ex) when (ex.ErrorCode == (int)SocketError.AddressAlreadyInUse)
+                    {
+                        Console.WriteLine("Sin puerto libre");
+                        j++;
+                    }
+                }
+            }
+            j--;
+            return puertos[j];
+        }
+
         string programdata = Environment.GetEnvironmentVariable("Programdata");
         string passRead = "";
         public string Password(string fileName)
