@@ -9,7 +9,7 @@ namespace Ejercicio1
     {
         static readonly object l = new();
         public bool ServerRunning { set; get; } = true;
-        public int[] Port1 { get; set; } = { 135, 135, 1385 };
+        public int[] Port1 { get; set; } = { 135, 135, 31416};
         //public int Port { get; set; } = 135;
         Socket s;
         TcpListener listener = null;
@@ -78,8 +78,8 @@ namespace Ejercicio1
                 {
                     sw.AutoFlush = true;
                     string pass = Password("password");
-                    string welcome = "Welcome to my server";
-                    sw.WriteLine(welcome);
+                    //string welcome = "Welcome to my server";
+                    //sw.WriteLine(welcome);
                     string? msg = "";
                     string comando;
                     DateTime fechaYHora;
@@ -152,7 +152,6 @@ namespace Ejercicio1
                 }
             }
             catch (Exception ex) when (ex is FileNotFoundException || ex is IOException || ex is UnauthorizedAccessException)
-            //unautorized
             {
                 Console.WriteLine("Error de archivo");
             }
