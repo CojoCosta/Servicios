@@ -11,7 +11,7 @@ namespace Ejercicio2
         Cliente cliente;
         List<Cliente> clientes = new();
         public bool ServerRunning { get; set; }
-        public int Port = 31416;
+        public int[] Port = { 125, 31416, 125 };
         //TODO Añadir logs al tener recursos compratidos en diferentes hilos
         public void InitServer()
         {
@@ -19,7 +19,7 @@ namespace Ejercicio2
             {
                 try
                 {
-                    IPEndPoint ie = new IPEndPoint(IPAddress.Any, Port);
+                    IPEndPoint ie = new IPEndPoint(IPAddress.Any, puertoEnUso(Port));
                     s.Bind(ie);
                     s.Listen(10);
                     Console.WriteLine($"Servidor iniciado. " + $"Escuchando en {ie.Address}:{ie.Port}");
@@ -91,6 +91,32 @@ namespace Ejercicio2
                     Console.WriteLine($"Cliente {nombreCliente} se ha desconectado");
                 }
             }
+        }
+        public int puertoEnUso(int[] puertos)
+        {
+            int j = 0;
+            bool flag = true;
+            while (flag && j < puertos.Length)
+            {
+                using (Socket socketComprobacion = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
+                {
+                    try
+                    {
+                        IPEndPoint comprobacion = new IPEndPoint(IPAddress.Any, puertos[j]);
+                        socketComprobacion.Bind(comprobacion);
+                        socketComprobacion.Listen();
+                        flag = false;
+                        return puertos[j];
+                    }
+                    catch (SocketException ex) when (ex.ErrorCode == (int)SocketError.AddressAlreadyInUse)
+                    {
+                        Console.WriteLine("Sin puerto libre");
+                        j++;
+                    }
+                }
+            }
+            j--;
+            return puertos[j];
         }
     }
 }
