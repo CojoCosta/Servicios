@@ -12,6 +12,7 @@ namespace Ejercicio2
         List<Cliente> clientes = new();
         public bool ServerRunning { get; set; }
         public int Port = 31416;
+        //TODO Añadir logs al tener recursos compratidos en diferentes hilos
         public void InitServer()
         {
             using (s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
@@ -76,7 +77,6 @@ namespace Ejercicio2
 
                             case "#exit":
                                 msg = null;
-
                                 break;
 
                             default:
@@ -88,6 +88,7 @@ namespace Ejercicio2
                 catch (Exception ex)
                 {
                     msg = null;
+                    Console.WriteLine($"Cliente {nombreCliente} se ha desconectado");
                 }
             }
         }
