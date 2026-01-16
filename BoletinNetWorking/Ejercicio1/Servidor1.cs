@@ -8,7 +8,7 @@ namespace Ejercicio1
     public class Servidor1//puertos ocupados  
     {
         public bool ServerRunning { set; get; } = true;
-        public int[] Port1 { get; set; } = { 135, 135, 135};
+        public int[] Port1 { get; set; } = { 135, 135, 31416};
         Socket s;
 
         public void InitServer()
