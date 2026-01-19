@@ -65,7 +65,7 @@ namespace Ejercicio2
                     nombreCliente = sr.ReadLine();
                     if (nombreCliente != null)
                     {
-                        cliente = new Cliente(id, nombreCliente, sw);
+                        cliente = new Cliente(id, ieCliente.Address, nombreCliente, sw);
                         clientes.Add(cliente);
                         id++;
                     }
@@ -86,11 +86,10 @@ namespace Ejercicio2
                                             sw.WriteLine($"{nombreCliente}@{ieCliente.Address}");
                                         }
                                         break;
-
                                     case "#exit":
                                         msg = null;
+                                        clientes.RemoveAt(id);
                                         break;
-
                                     default:
                                         sw.WriteLine($"{nombreCliente}@{ieCliente.Address}: {msg}");
                                         break;
