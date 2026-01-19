@@ -10,9 +10,10 @@ namespace Ejercicio2
         Socket s;
         Cliente cliente;
         List<Cliente> clientes = new();
+        static object l = new object();
         public bool ServerRunning { get; set; }
         public int[] Port = { 125, 31416, 125 };
-        //TODO Añadir logs al tener recursos compratidos en diferentes hilos
+        //TODO Añadir locks al tener recursos compratidos en diferentes hilos
         public void InitServer()
         {
             using (s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
@@ -26,10 +27,16 @@ namespace Ejercicio2
                     Console.WriteLine("Esperando conexiones... (Ctrl+C para salir)");
                     while (ServerRunning)
                     {
-                        Socket cadaCliente = s.Accept();
-                        Thread hilo = new Thread(() => protocoloCliente(cadaCliente));
-                        //hilo.IsBackground = true; //Lo activo si quiero echar a todos los clientes
-                        hilo.Start();
+                        lock (l)
+                        {
+                            if (ServerRunning)
+                            {
+                                Socket cadaCliente = s.Accept();
+                                Thread hilo = new Thread(() => protocoloCliente(cadaCliente));
+                                //hilo.IsBackground = true; //Lo activo si quiero echar a todos los clientes
+                                hilo.Start();
+                            }
+                        }
                     }
                 }
                 catch (SocketException ex)
@@ -66,22 +73,29 @@ namespace Ejercicio2
                     msg = sr.ReadLine();
                     while (msg != null)
                     {
-                        switch (msg)
+                        lock (l)
                         {
-                            case "#list":
-                                foreach (Cliente cadaCliente in clientes)
+                            if (msg != null)
+                            {
+
+                                switch (msg)
                                 {
-                                    sw.WriteLine($"{nombreCliente}@{ieCliente.Address}");
+                                    case "#list":
+                                        foreach (Cliente cadaCliente in clientes)
+                                        {
+                                            sw.WriteLine($"{nombreCliente}@{ieCliente.Address}");
+                                        }
+                                        break;
+
+                                    case "#exit":
+                                        msg = null;
+                                        break;
+
+                                    default:
+                                        sw.WriteLine($"{nombreCliente}@{ieCliente.Address}: {msg}");
+                                        break;
                                 }
-                                break;
-
-                            case "#exit":
-                                msg = null;
-                                break;
-
-                            default:
-                                sw.WriteLine($"{nombreCliente}@{ieCliente.Address}: {msg}");
-                                break;
+                            }
                         }
                     }
                 }
