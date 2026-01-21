@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TemaNetworking")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f83e8a9b59b16a1035205612c568f78f5c33dc96")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+936ad54e5d2f67cd7cfac0e428644c31d8fb7de4")]
 [assembly: System.Reflection.AssemblyProductAttribute("TemaNetworking")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TemaNetworking")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

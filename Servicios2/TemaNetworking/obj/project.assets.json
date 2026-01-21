@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Desarrollo-de-interfaces\\1ªEvaluacion\\Servicios2\\TemaNetworking\\TemaNetworking.csproj",
+      "projectUniqueName": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\Servicios2\\TemaNetworking\\TemaNetworking.csproj",
       "projectName": "TemaNetworking",
-      "projectPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Desarrollo-de-interfaces\\1ªEvaluacion\\Servicios2\\TemaNetworking\\TemaNetworking.csproj",
+      "projectPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\Servicios2\\TemaNetworking\\TemaNetworking.csproj",
       "packagesPath": "C:\\Users\\Diego Costa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Desarrollo-de-interfaces\\1ªEvaluacion\\Servicios2\\TemaNetworking\\obj\\",
+      "outputPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\Servicios2\\TemaNetworking\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
