@@ -12,8 +12,7 @@ namespace Ejercicio2
         List<Cliente> clientes = new();
         static object l = new object();
         public bool ServerRunning { get; set; }
-        public int[] Port = { 125, 31416, 125 };
-        //TODO Añadir locks al tener recursos compratidos en diferentes hilos
+        public int[] Port = { 135, 31416, 135 };
         public void InitServer()
         {
             using (s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
@@ -27,16 +26,10 @@ namespace Ejercicio2
                     Console.WriteLine("Esperando conexiones... (Ctrl+C para salir)");
                     while (ServerRunning)
                     {
-                        lock (l)
-                        {
-                            if (ServerRunning)
-                            {
-                                Socket cadaCliente = s.Accept();
-                                Thread hilo = new Thread(() => protocoloCliente(cadaCliente));
-                                //hilo.IsBackground = true; //Lo activo si quiero echar a todos los clientes
-                                hilo.Start();
-                            }
-                        }
+                        Socket cadaCliente = s.Accept();
+                        Thread hilo = new Thread(() => protocoloCliente(cadaCliente));
+                        //hilo.IsBackground = true; //Lo activo si quiero echar a todos los clientes
+                        hilo.Start();
                     }
                 }
                 catch (SocketException ex)
@@ -77,7 +70,6 @@ namespace Ejercicio2
                         {
                             if (msg != null)
                             {
-
                                 switch (msg)
                                 {
                                     case "#list":
@@ -88,7 +80,10 @@ namespace Ejercicio2
                                         break;
                                     case "#exit":
                                         msg = null;
-                                        clientes.RemoveAt(id);
+                                        for (int i = id; i > 0; i--)
+                                        {
+                                            clientes.RemoveAt(id);
+                                        }
                                         break;
                                     default:
                                         sw.WriteLine($"{nombreCliente}@{ieCliente.Address}: {msg}");
