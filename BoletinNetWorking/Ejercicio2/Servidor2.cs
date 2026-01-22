@@ -11,8 +11,9 @@ namespace Ejercicio2
         Cliente cliente;
         List<Cliente> clientes = new();
         static object l = new object();
-        public bool ServerRunning { get; set; }
-        public int[] Port = { 135, 31416, 135 };
+        public bool ServerRunning { get; set; } = true;
+        public int[] Port = { 31416, 31416, 135 };
+
         public void InitServer()
         {
             using (s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
@@ -75,7 +76,7 @@ namespace Ejercicio2
                                     case "#list":
                                         foreach (Cliente cadaCliente in clientes)
                                         {
-                                            sw.WriteLine($"{nombreCliente}@{ieCliente.Address}");
+                                            sw.WriteLine($"{cadaCliente.nombre}@{cadaCliente.ip}");
                                         }
                                         break;
                                     case "#exit":
