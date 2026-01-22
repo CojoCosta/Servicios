@@ -8,7 +8,6 @@ namespace Ejercicio2
     internal class Servidor2
     {
         Socket s;
-        Cliente cliente;
         List<Cliente> clientes = new();
         static object l = new object();
         public bool ServerRunning { get; set; } = true;
@@ -40,6 +39,7 @@ namespace Ejercicio2
             }
         }
 
+        Cliente cliente;
         public void protocoloCliente(Socket sCliente)
         {
             IPEndPoint ieCliente = (IPEndPoint)sCliente.RemoteEndPoint;
@@ -63,31 +63,37 @@ namespace Ejercicio2
                         clientes.Add(cliente);
                         id++;
                     }
-                    sw.WriteLine("Ya puede empezar a chatear");
+                    else
+                    {
+                        msg = null;
+                    }
+                        sw.WriteLine("Ya puede empezar a chatear");
                     msg = sr.ReadLine();
                     while (msg != null)
                     {
                         lock (l)
                         {
+                            msg = sr.ReadLine();
                             if (msg != null)
                             {
                                 switch (msg)
                                 {
-                                    case "#list":
+                                    case "list":
                                         foreach (Cliente cadaCliente in clientes)
                                         {
                                             sw.WriteLine($"{cadaCliente.nombre}@{cadaCliente.ip}");
                                         }
                                         break;
-                                    case "#exit":
-                                        msg = null;
+                                    case "exit":
                                         for (int i = id; i > 0; i--)
                                         {
-                                            clientes.RemoveAt(id);
+                                            clientes.RemoveAt(cliente.id);
                                         }
+                                        msg = null;
                                         break;
                                     default:
-                                        sw.WriteLine($"{nombreCliente}@{ieCliente.Address}: {msg}");
+                                        cliente.sw.WriteLine($"{cliente.id}-{cliente.nombre}@{cliente.ip}:{msg}");
+                                        //sw.WriteLine($"{cliente.nombre}@{cliente.ip}: {msg}");
                                         break;
                                 }
                             }
