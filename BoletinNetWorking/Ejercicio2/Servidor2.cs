@@ -68,7 +68,6 @@ namespace Ejercicio2
                         msg = null;
                     }
                     sw.WriteLine("Ya puede empezar a chatear");
-                    msg = sr.ReadLine();
                     while (msg != null)
                     {
                         msg = sr.ReadLine();
