@@ -9,11 +9,15 @@ namespace Ejercicio2
 {
     internal class Cliente
     {
-        public int id { get; set; }
+        private int id;
+        private IPAddress ip;
+        private string nombre;
+        private StreamWriter sw;
+        public int Id { get; set; }
 
-        public IPAddress ip { get; set; }
-        public string nombre { get; set; }
-        public StreamWriter sw {  get; set; }
+        public IPAddress Ip { get; set; }
+        public string Nombre { get; set; }
+        public StreamWriter Sw {  get; set; }
 
         public Cliente(int id, IPAddress ip, string nombre, StreamWriter sw)
         {

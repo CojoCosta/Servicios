@@ -67,38 +67,54 @@ namespace Ejercicio2
                     {
                         msg = null;
                     }
-                        sw.WriteLine("Ya puede empezar a chatear");
+                    sw.WriteLine("Ya puede empezar a chatear");
                     msg = sr.ReadLine();
                     while (msg != null)
                     {
-                        lock (l)
+                        msg = sr.ReadLine();
+
+                        switch (msg)
                         {
-                            msg = sr.ReadLine();
-                            if (msg != null)
-                            {
-                                switch (msg)
+                            case "list":
+                                lock (l)
                                 {
-                                    case "list":
-                                        foreach (Cliente cadaCliente in clientes)
+                                    foreach (Cliente cadaCliente in clientes)
+                                    {
+                                        if (cadaCliente != cliente)
                                         {
-                                            sw.WriteLine($"{cadaCliente.nombre}@{cadaCliente.ip}");
+                                            cliente.Sw.WriteLine($"{cliente.Nombre}@{cliente.Ip}");
                                         }
-                                        break;
-                                    case "exit":
-                                        for (int i = id; i > 0; i--)
-                                        {
-                                            clientes.RemoveAt(cliente.id);
-                                        }
-                                        msg = null;
-                                        break;
-                                    default:
-                                        cliente.sw.WriteLine($"{cliente.id}-{cliente.nombre}@{cliente.ip}:{msg}");
-                                        //sw.WriteLine($"{cliente.nombre}@{cliente.ip}: {msg}");
-                                        break;
+                                    }
                                 }
-                            }
+                                break;
+                            case "exit":
+                                lock (l)
+                                {
+                                    for (int i = id; i > 0; i--)
+                                    {
+                                        clientes.RemoveAt(cliente.Id);
+                                    }
+                                }
+                                msg = null;
+                                break;
+                            default:
+                                lock (l)
+                                {
+                                    foreach (Cliente cadaCliente in clientes)
+                                    {
+                                        if (cliente != cadaCliente)
+                                        {
+                                            cliente.Sw.WriteLine($"{cliente.Id}-{cliente.Nombre}@{cliente.Ip}:{msg}");
+                                        }
+                                    }
+
+                                }
+                                //sw.WriteLine($"{cliente.nombre}@{cliente.ip}: {msg}");
+                                break;
                         }
+
                     }
+
                 }
                 catch (Exception ex)
                 {
