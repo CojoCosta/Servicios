@@ -9,7 +9,7 @@ namespace Ejercicio2
     {
         Socket s;
         List<Cliente> clientes = new();
-        static object l = new object();
+        static readonly object l = new object();
         public bool ServerRunning { get; set; } = true;
         public int[] Port = { 135, 135, 31416 };
 
@@ -49,7 +49,6 @@ namespace Ejercicio2
             using (StreamReader sr = new StreamReader(ns))
             using (StreamWriter sw = new StreamWriter(ns))
             {
-                int id = 1;
                 string nombreCliente = "";
                 string? msg = "";
                 sw.AutoFlush = true;
@@ -60,8 +59,10 @@ namespace Ejercicio2
                     nombreCliente = sr.ReadLine();
 
                     Cliente cliente = new Cliente(ieCliente.Address, nombreCliente, sw);
-                    clientes.Add(cliente);
-                    id++;
+                    lock (l)
+                    {
+                        clientes.Add(cliente);
+                    }
                     foreach (Cliente cadaCliente in clientes)
                     {
                         if (cadaCliente.Sw != sw)
@@ -74,17 +75,21 @@ namespace Ejercicio2
                     while (msg != null)
                     {
                         msg = sr.ReadLine();
-                        lock (l)
+                        switch (msg)
                         {
-                            switch (msg)
-                            {
-                                case "list":
+                            case "list":
+                                lock (l)
+                                {
                                     foreach (Cliente cadaCliente in clientes)
                                     {
                                         sw.WriteLine($"{cadaCliente.Nombre}@{cadaCliente.Ip}");
                                     }
-                                    break;
-                                case "exit":
+                                }
+                                break;
+                            case "exit":
+                                lock (l)
+                                {
+
                                     foreach (Cliente cadaCliente in clientes)
                                     {
                                         if (cadaCliente.Sw != sw)
@@ -93,9 +98,13 @@ namespace Ejercicio2
                                             clientes.Remove(cadaCliente);
                                         }
                                     }
-                                    msg = null;
-                                    break;
-                                default:
+                                }
+                                msg = null;
+                                break;
+                            default:
+                                lock (l)
+                                {
+
                                     foreach (Cliente cadaCliente in clientes)
                                     {
                                         if (cadaCliente.Sw != sw)
@@ -103,8 +112,8 @@ namespace Ejercicio2
                                             cadaCliente.Sw.WriteLine($"{cliente.Nombre}@{cliente.Ip}:{msg}");
                                         }
                                     }
-                                    break;
-                            }
+                                }
+                                break;
                         }
                     }
                 }
