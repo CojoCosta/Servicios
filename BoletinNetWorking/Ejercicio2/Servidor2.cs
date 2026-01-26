@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ejercicio2
 {
-    internal class Servidor2
+    internal class Servidor2//Si hay cierres falla la comunicación posterior. Función envio de mensaje. Excp genérica no.
     {
         Socket s;
         List<Cliente> clientes = new();
@@ -55,9 +55,7 @@ namespace Ejercicio2
                 sw.WriteLine("Indique su nombre: ");
                 try
                 {
-
                     nombreCliente = sr.ReadLine();
-
                     Cliente cliente = new Cliente(ieCliente.Address, nombreCliente, sw);
                     lock (l)
                     {
@@ -117,7 +115,7 @@ namespace Ejercicio2
                         }
                     }
                 }
-                catch (Exception ex)
+                catch (Exception ex) when (ex is IOException || ex is SocketException || ex is ObjectDisposedException) 
                 {
                     msg = null;
                     Console.WriteLine($"Cliente {nombreCliente} se ha desconectado");
