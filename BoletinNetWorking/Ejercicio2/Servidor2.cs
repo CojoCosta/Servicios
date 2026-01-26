@@ -62,12 +62,12 @@ namespace Ejercicio2
                     lock (l)
                     {
                         clientes.Add(cliente);
-                    }
-                    foreach (Cliente cadaCliente in clientes)
-                    {
-                        if (cadaCliente.Sw != sw)
+                        foreach (Cliente cadaCliente in clientes)
                         {
-                            cadaCliente.Sw.WriteLine($"{cliente.Nombre} se ha unido al servidor");
+                            if (cadaCliente.Sw != sw)
+                            {
+                                cadaCliente.Sw.WriteLine($"{cliente.Nombre} se ha unido al servidor");
+                            }
                         }
                     }
 
