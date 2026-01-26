@@ -74,21 +74,17 @@ namespace Ejercicio2
                     while (msg != null)
                     {
                         msg = sr.ReadLine();
-
-                        switch (msg)
+                        lock (l)
                         {
-                            case "list":
-                                lock (l)
-                                {
+                            switch (msg)
+                            {
+                                case "list":
                                     foreach (Cliente cadaCliente in clientes)
                                     {
                                         sw.WriteLine($"{cadaCliente.Nombre}@{cadaCliente.Ip}");
                                     }
-                                }
-                                break;
-                            case "exit":
-                                lock (l)
-                                {
+                                    break;
+                                case "exit":
                                     foreach (Cliente cadaCliente in clientes)
                                     {
                                         if (cadaCliente.Sw != sw)
@@ -97,12 +93,9 @@ namespace Ejercicio2
                                             clientes.Remove(cadaCliente);
                                         }
                                     }
-                                }
-                                msg = null;
-                                break;
-                            default:
-                                lock (l)
-                                {
+                                    msg = null;
+                                    break;
+                                default:
                                     foreach (Cliente cadaCliente in clientes)
                                     {
                                         if (cadaCliente.Sw != sw)
@@ -110,8 +103,8 @@ namespace Ejercicio2
                                             cadaCliente.Sw.WriteLine($"{cliente.Nombre}@{cliente.Ip}:{msg}");
                                         }
                                     }
-                                }
-                                break;
+                                    break;
+                            }
                         }
                     }
                 }
