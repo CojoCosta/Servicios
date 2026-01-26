@@ -39,7 +39,7 @@ namespace Ejercicio2
             }
         }
 
-        Cliente cliente;
+
         public void protocoloCliente(Socket sCliente)
         {
             IPEndPoint ieCliente = (IPEndPoint)sCliente.RemoteEndPoint;
@@ -56,17 +56,20 @@ namespace Ejercicio2
                 sw.WriteLine("Indique su nombre: ");
                 try
                 {
+
                     nombreCliente = sr.ReadLine();
-                    if (nombreCliente != null)
+
+                    Cliente cliente = new Cliente(ieCliente.Address, nombreCliente, sw);
+                    clientes.Add(cliente);
+                    id++;
+                    foreach (Cliente cadaCliente in clientes)
                     {
-                        cliente = new Cliente(id, ieCliente.Address, nombreCliente, sw);
-                        clientes.Add(cliente);
-                        id++;
+                        if (cadaCliente.Sw != sw)
+                        {
+                            cadaCliente.Sw.WriteLine($"{cliente.Nombre} se ha unido al servidor");
+                        }
                     }
-                    else
-                    {
-                        msg = null;
-                    }
+
                     sw.WriteLine("Ya puede empezar a chatear");
                     while (msg != null)
                     {
@@ -79,19 +82,20 @@ namespace Ejercicio2
                                 {
                                     foreach (Cliente cadaCliente in clientes)
                                     {
-                                        if (cadaCliente != cliente)
-                                        {
-                                            cliente.Sw.WriteLine($"{cliente.Nombre}@{cliente.Ip}");
-                                        }
+                                        sw.WriteLine($"{cadaCliente.Nombre}@{cadaCliente.Ip}");
                                     }
                                 }
                                 break;
                             case "exit":
                                 lock (l)
                                 {
-                                    for (int i = id; i > 0; i--)
+                                    foreach (Cliente cadaCliente in clientes)
                                     {
-                                        clientes.RemoveAt(cliente.Id);
+                                        if (cadaCliente.Sw != sw)
+                                        {
+                                            cadaCliente.Sw.WriteLine($"{cliente.Nombre} se ha desconectado del servidor");
+                                            clientes.Remove(cadaCliente);
+                                        }
                                     }
                                 }
                                 msg = null;
@@ -101,19 +105,15 @@ namespace Ejercicio2
                                 {
                                     foreach (Cliente cadaCliente in clientes)
                                     {
-                                        if (cliente != cadaCliente)
+                                        if (cadaCliente.Sw != sw)
                                         {
-                                            cliente.Sw.WriteLine($"{cliente.Id}-{cliente.Nombre}@{cliente.Ip}:{msg}");
+                                            cadaCliente.Sw.WriteLine($"{cliente.Nombre}@{cliente.Ip}:{msg}");
                                         }
                                     }
-
                                 }
-                                //sw.WriteLine($"{cliente.nombre}@{cliente.ip}: {msg}");
                                 break;
                         }
-
                     }
-
                 }
                 catch (Exception ex)
                 {
