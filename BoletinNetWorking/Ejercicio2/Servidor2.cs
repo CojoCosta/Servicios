@@ -11,7 +11,7 @@ namespace Ejercicio2
         List<Cliente> clientes = new();
         static object l = new object();
         public bool ServerRunning { get; set; } = true;
-        public int[] Port = { 31416, 31416, 135 };
+        public int[] Port = { 135, 135, 31416 };
 
         public void InitServer()
         {
