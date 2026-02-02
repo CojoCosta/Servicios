@@ -1,0 +1,12 @@
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\FormEjercicio1\bin\Debug\FormEjercicio1.exe.config
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\FormEjercicio1\bin\Debug\FormEjercicio1.exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\FormEjercicio1\bin\Debug\FormEjercicio1.pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\FormEjercicio1\obj\Debug\Ejercicio1Form.csproj.AssemblyReference.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\FormEjercicio1\obj\Debug\FormEjercicio1.exe.config
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\FormEjercicio1\obj\Debug\FormEjercicio1.Form1.resources
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\FormEjercicio1\obj\Debug\FormEjercicio1.Properties.Resources.resources
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\FormEjercicio1\obj\Debug\FormEjercicio1.PuertoIP.resources
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\FormEjercicio1\obj\Debug\Ejercicio1Form.csproj.GenerateResource.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\FormEjercicio1\obj\Debug\Ejercicio1Form.csproj.CoreCompileInputs.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\FormEjercicio1\obj\Debug\FormEjercicio1.exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\FormEjercicio1\obj\Debug\FormEjercicio1.pdb

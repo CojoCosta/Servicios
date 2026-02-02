@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.btnPosicion = new System.Windows.Forms.Button();
@@ -38,16 +39,18 @@
             // 
             // txtUrl
             // 
-            this.txtUrl.Location = new System.Drawing.Point(55, 43);
+            this.txtUrl.Location = new System.Drawing.Point(37, 28);
+            this.txtUrl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(678, 26);
+            this.txtUrl.Size = new System.Drawing.Size(453, 20);
             this.txtUrl.TabIndex = 0;
             // 
             // btnBusqueda
             // 
-            this.btnBusqueda.Location = new System.Drawing.Point(55, 193);
+            this.btnBusqueda.Location = new System.Drawing.Point(37, 125);
+            this.btnBusqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBusqueda.Name = "btnBusqueda";
-            this.btnBusqueda.Size = new System.Drawing.Size(120, 47);
+            this.btnBusqueda.Size = new System.Drawing.Size(80, 31);
             this.btnBusqueda.TabIndex = 1;
             this.btnBusqueda.Text = "Búsqueda";
             this.btnBusqueda.UseVisualStyleBackColor = true;
@@ -55,9 +58,10 @@
             // 
             // btnPosicion
             // 
-            this.btnPosicion.Location = new System.Drawing.Point(319, 193);
+            this.btnPosicion.Location = new System.Drawing.Point(213, 125);
+            this.btnPosicion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPosicion.Name = "btnPosicion";
-            this.btnPosicion.Size = new System.Drawing.Size(120, 47);
+            this.btnPosicion.Size = new System.Drawing.Size(80, 31);
             this.btnPosicion.TabIndex = 2;
             this.btnPosicion.Text = "Posición";
             this.btnPosicion.UseVisualStyleBackColor = true;
@@ -65,9 +69,10 @@
             // 
             // btnHttp
             // 
-            this.btnHttp.Location = new System.Drawing.Point(613, 193);
+            this.btnHttp.Location = new System.Drawing.Point(409, 125);
+            this.btnHttp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHttp.Name = "btnHttp";
-            this.btnHttp.Size = new System.Drawing.Size(120, 47);
+            this.btnHttp.Size = new System.Drawing.Size(80, 31);
             this.btnHttp.TabIndex = 3;
             this.btnHttp.Text = "Http";
             this.btnHttp.UseVisualStyleBackColor = true;
@@ -75,33 +80,36 @@
             // 
             // txtComun
             // 
-            this.txtComun.Location = new System.Drawing.Point(55, 161);
+            this.txtComun.Location = new System.Drawing.Point(37, 105);
+            this.txtComun.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtComun.Name = "txtComun";
-            this.txtComun.Size = new System.Drawing.Size(678, 26);
+            this.txtComun.Size = new System.Drawing.Size(453, 20);
             this.txtComun.TabIndex = 4;
             // 
             // listaBusqueda
             // 
             this.listaBusqueda.FormattingEnabled = true;
-            this.listaBusqueda.ItemHeight = 20;
-            this.listaBusqueda.Location = new System.Drawing.Point(55, 257);
+            this.listaBusqueda.Location = new System.Drawing.Point(37, 167);
+            this.listaBusqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listaBusqueda.Name = "listaBusqueda";
-            this.listaBusqueda.Size = new System.Drawing.Size(218, 244);
+            this.listaBusqueda.Size = new System.Drawing.Size(147, 160);
             this.listaBusqueda.TabIndex = 5;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 513);
+            this.ClientSize = new System.Drawing.Size(650, 333);
             this.Controls.Add(this.listaBusqueda);
             this.Controls.Add(this.txtComun);
             this.Controls.Add(this.btnHttp);
             this.Controls.Add(this.btnPosicion);
             this.Controls.Add(this.btnBusqueda);
             this.Controls.Add(this.txtUrl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Ejercicio4 Bol Hilos";
             this.ResumeLayout(false);
             this.PerformLayout();
 

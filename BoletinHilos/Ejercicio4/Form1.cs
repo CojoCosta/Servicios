@@ -84,13 +84,12 @@ namespace Ejercicio4
             }
 
             string[] tareasRealizadas = await Task.WhenAll(tareasPosicion);
-            while (tareasPosicion.Count > 0)
+
+            foreach (string tareaRealizada in tareasRealizadas)
             {
-                foreach (string tareaRealizada in tareasRealizadas)
-                {
-                    listaBusqueda.Items.Add(tareaRealizada);
-                }
+                listaBusqueda.Items.Add(tareaRealizada);
             }
+
             tareasPosicion.Clear();
         }
 

@@ -8,3 +8,14 @@ C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio4\obj\Debug\Ejercici
 C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio4\obj\Debug\Ejercicio4.csproj.CoreCompileInputs.cache
 C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio4\obj\Debug\Ejercicio4.exe
 C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio4\obj\Debug\Ejercicio4.pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio4\bin\Debug\Ejercicio4.exe.config
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio4\bin\Debug\Ejercicio4.exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio4\bin\Debug\Ejercicio4.pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio4\obj\Debug\Ejercicio4.csproj.AssemblyReference.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio4\obj\Debug\Ejercicio4.exe.config
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio4\obj\Debug\Ejercicio4.Form1.resources
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio4\obj\Debug\Ejercicio4.Properties.Resources.resources
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio4\obj\Debug\Ejercicio4.csproj.GenerateResource.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio4\obj\Debug\Ejercicio4.csproj.CoreCompileInputs.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio4\obj\Debug\Ejercicio4.exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio4\obj\Debug\Ejercicio4.pdb

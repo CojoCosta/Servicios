@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "Ejercicio2\\Ejercicio2.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

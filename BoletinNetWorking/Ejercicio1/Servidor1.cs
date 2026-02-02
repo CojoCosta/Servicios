@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ejercicio1
 {
-    public class Servidor1//puertos ocupados  
+    public class Servidor1
     {
         public bool ServerRunning { set; get; } = true;
         public int[] Port1 { get; set; } = { 135, 135, 31416};

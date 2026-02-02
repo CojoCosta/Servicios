@@ -9,3 +9,14 @@ C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercici
 C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.exe
 C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.pdb
 C:\Users\dcost\source\repos\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.exe.config
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio3\bin\Debug\Ejercicio3.exe.config
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio3\bin\Debug\Ejercicio3.exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio3\bin\Debug\Ejercicio3.pdb
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.csproj.AssemblyReference.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.exe.config
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.Form1.resources
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.Properties.Resources.resources
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.csproj.GenerateResource.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.csproj.CoreCompileInputs.cache
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.exe
+C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinHilos\Ejercicio3\obj\Debug\Ejercicio3.pdb

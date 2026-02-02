@@ -1,10 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Diego Costa\\Desktop\\Servicios\\BoletinArchivosDelegadosLambdas\\",
+  "WorkspaceRootPath": "C:\\Users\\Diego Costa\\source\\repos\\CojoCosta\\Servicios\\BoletinArchivosDelegadosLambdas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6390A84B-668E-40CE-A163-003E63C6AB1D}|BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas.csproj|c:\\users\\diego costa\\desktop\\servicios\\boletinarchivosdelegadoslambdas\\boletinarchivosdelegadoslambdas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6390A84B-668E-40CE-A163-003E63C6AB1D}|BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas.csproj|solutionrelative:boletinarchivosdelegadoslambdas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Diego Costa\\Desktop\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,13 +24,11 @@
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Diego Costa\\Desktop\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\Program.cs",
-              "RelativeDocumentMoniker": "BoletinArchivosDelegadosLambdas\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Desktop\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\Program.cs",
               "ToolTip": "C:\\Users\\Diego Costa\\Desktop\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\Program.cs",
-              "RelativeToolTip": "BoletinArchivosDelegadosLambdas\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Desktop\\Servicios\\BoletinArchivosDelegadosLambdas\\BoletinArchivosDelegadosLambdas\\Program.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T10:50:11.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T10:50:11.124Z"
             }
           ]
         }
