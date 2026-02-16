@@ -1,0 +1,8 @@
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio3\bin\Debug\Servicio3.exe.config
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio3\bin\Debug\Servicio3.exe
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio3\bin\Debug\Servicio3.pdb
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio3\obj\Debug\Servicio3.csproj.AssemblyReference.cache
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio3\obj\Debug\Servicio3.csproj.CoreCompileInputs.cache
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio3\obj\Debug\Servicio3.exe
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio3\obj\Debug\Servicio3.pdb
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio3\obj\Debug\Servicio3.exe.config

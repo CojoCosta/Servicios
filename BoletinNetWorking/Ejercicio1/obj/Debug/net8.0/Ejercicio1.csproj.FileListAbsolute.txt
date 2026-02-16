@@ -13,3 +13,18 @@ C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\Ejercici
 C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\Ejercicio1\obj\Debug\net8.0\Ejercicio1.pdb
 C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\Ejercicio1\obj\Debug\net8.0\Ejercicio1.genruntimeconfig.cache
 C:\Users\Diego Costa\source\repos\CojoCosta\Servicios\BoletinNetWorking\Ejercicio1\obj\Debug\net8.0\ref\Ejercicio1.dll
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\bin\Debug\net8.0\Ejercicio1.exe
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\bin\Debug\net8.0\Ejercicio1.deps.json
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\bin\Debug\net8.0\Ejercicio1.runtimeconfig.json
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\bin\Debug\net8.0\Ejercicio1.dll
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\bin\Debug\net8.0\Ejercicio1.pdb
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\obj\Debug\net8.0\Ejercicio1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\obj\Debug\net8.0\Ejercicio1.AssemblyInfoInputs.cache
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\obj\Debug\net8.0\Ejercicio1.AssemblyInfo.cs
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\obj\Debug\net8.0\Ejercicio1.csproj.CoreCompileInputs.cache
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\obj\Debug\net8.0\Ejercicio1.sourcelink.json
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\obj\Debug\net8.0\Ejercicio1.dll
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\obj\Debug\net8.0\refint\Ejercicio1.dll
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\obj\Debug\net8.0\Ejercicio1.pdb
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\obj\Debug\net8.0\Ejercicio1.genruntimeconfig.cache
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Ejercicio1\obj\Debug\net8.0\ref\Ejercicio1.dll
