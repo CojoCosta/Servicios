@@ -1,0 +1,8 @@
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio5\bin\Debug\Servicio5.exe.config
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio5\bin\Debug\Servicio5.exe
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio5\bin\Debug\Servicio5.pdb
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio5\obj\Debug\Servicio5.csproj.AssemblyReference.cache
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio5\obj\Debug\Servicio5.csproj.CoreCompileInputs.cache
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio5\obj\Debug\Servicio5.exe
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio5\obj\Debug\Servicio5.pdb
+C:\Users\dcost\Source\Repos\Servicios\BoletinNetWorking\Servicio5\obj\Debug\Servicio5.exe.config

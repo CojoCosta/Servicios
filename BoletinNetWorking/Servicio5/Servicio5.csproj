@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E84F71B6-8B8B-4889-9B0A-55E86DD5D037}</ProjectGuid>
+    <ProjectGuid>{9C196BE4-CA39-46F4-8234-867CA936BA1D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Servicio4</RootNamespace>
-    <AssemblyName>Servicio4</AssemblyName>
+    <RootNamespace>Servicio5</RootNamespace>
+    <AssemblyName>Servicio5</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LanzarServidor4.cs" />
-    <Compile Include="Record.cs" />
-    <Compile Include="Servidor4.cs" />
+    <Compile Include="FlyRunner.cs" />
+    <Compile Include="LanzarServidor5.cs" />
+    <Compile Include="FlyServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

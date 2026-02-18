@@ -253,7 +253,6 @@ namespace Servicio4
                     foreach (Record cadaRecord in records)
                     {
                         br.Write($"{cadaRecord.Nombre} {cadaRecord.Segundos}");
-
                     }
                 }
             }
