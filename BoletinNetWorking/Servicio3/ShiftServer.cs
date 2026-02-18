@@ -15,45 +15,6 @@ namespace Servicio3
         string[] users = new string[0];
         List<string> waitQueue = new List<string>();
 
-        public void ReadNames(string path)
-        {
-            try
-            {
-
-                using (StreamReader sr = new StreamReader(path))
-                {
-                    users = sr.ReadToEnd().Split(';');
-                }
-            }
-            catch (IOException e)
-            {
-                Console.WriteLine("Error de archivo");
-            }
-        }
-
-        public int ReadPin(string path)
-        {
-            string pin = "";
-            try
-            {
-                using (StreamReader sr = new StreamReader(path))
-                {
-                    string content = sr.ReadToEnd().Trim();
-                    for (int i = 0; i < 3; i++)
-                    {
-                        pin += content[i];
-                    }
-                }
-            }
-            catch (IOException e)
-            {
-                Console.WriteLine("Error de archivo");
-                return -1;
-            }
-            return int.Parse(pin) | -1;
-        }
-
-
         public bool serverRunning = true;
         Socket s;
         int puerto = 31416;
@@ -97,22 +58,6 @@ namespace Servicio3
                 }
                 while (!isFree && PuertoInicial < IPEndPoint.MaxPort); // Comprobar lógica del bucle
                 return PuertoInicial;
-            }
-        }
-        public void Stop()
-        {
-            serverRunning = false;
-            s.Close();
-        }
-        public void cargarWaitQueue()
-        {
-            using (StreamReader srPin = new StreamReader($"{Environment.GetEnvironmentVariable("userprofile")}\\waitQueue.txt"))
-            {
-                string[] usuarios = srPin.ReadToEnd().Split(';');
-                for (int i = 0; i < usuarios.Length; i++)
-                {
-                    waitQueue.Add(usuarios[i]);
-                }
             }
         }
 
@@ -290,6 +235,62 @@ namespace Servicio3
                 }
             }
         }
+
+        public void Stop()
+        {
+            serverRunning = false;
+            s.Close();
+        }
+        public void cargarWaitQueue()
+        {
+            using (StreamReader srPin = new StreamReader($"{Environment.GetEnvironmentVariable("userprofile")}\\waitQueue.txt"))
+            {
+                string[] usuarios = srPin.ReadToEnd().Split(';');
+                for (int i = 0; i < usuarios.Length; i++)
+                {
+                    waitQueue.Add(usuarios[i]);
+                }
+            }
+        }
+
+        public void ReadNames(string path)
+        {
+            try
+            {
+
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    users = sr.ReadToEnd().Split(';');
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("Error de archivo");
+            }
+        }
+
+        public int ReadPin(string path)
+        {
+            string pin = "";
+            try
+            {
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    string content = sr.ReadToEnd().Trim();
+                    for (int i = 0; i < 3; i++)
+                    {
+                        pin += content[i];
+                    }
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("Error de archivo");
+                return -1;
+            }
+            return int.Parse(pin) | -1;
+        }
+
 
         public bool usuarioEnLista(string[] users, string nombreUsuario)
         {
