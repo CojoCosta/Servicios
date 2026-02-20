@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Servicio3
+namespace Servicio3//Varias lineas en readnames. Readpin revisar. Probar.
 {
     internal class ShiftServer
     {
@@ -90,12 +90,12 @@ namespace Servicio3
                 {
                     Console.WriteLine("Servidor Cerrado");
                 }
-                ReadNames($"{Environment.GetEnvironmentVariable("userprofile")}\\usuarios.txt");
             }
         }
 
         public void protocoloCliente(Socket sCliente)
         {
+            ReadNames($"{Environment.GetEnvironmentVariable("userprofile")}\\usuarios.txt");
             IPEndPoint ieCliente = (IPEndPoint)sCliente.RemoteEndPoint;
             Console.WriteLine($"Cliente conectado:{ieCliente.Address} " + $"en puerto {ieCliente.Port}");
             Encoding codificacion = Console.OutputEncoding;
@@ -138,7 +138,7 @@ namespace Servicio3
                                     switch (comandoFinal[0])
                                     {
                                         case "del":
-                                            bool flagnumero = int.TryParse(comandoFinal[1], out int pos);
+                                            bool flagnumero = int.TryParse(comando out int pos);
                                             if (!flagnumero || pos < 0 || pos > waitQueue.Count)
                                             {
                                                 sw.WriteLine("delete rror");
@@ -151,17 +151,20 @@ namespace Servicio3
                                             }
                                             break;
                                         case "chpin":
-                                            if (compruebaPin(comandoFinal[1]).Item1)
+                                            if (comandoFinal.Length == 2)
                                             {
-                                                using (StreamWriter swPin = new StreamWriter($"{Environment.GetEnvironmentVariable("userprofile")}\\pin.txt"))
+                                                if (compruebaPin(comandoFinal[1]).Item1)
                                                 {
-                                                    swPin.Write(compruebaPin(comandoFinal[1]).Item2);
+                                                    using (StreamWriter swPin = new StreamWriter($"{Environment.GetEnvironmentVariable("userprofile")}\\pin.txt"))
+                                                    {
+                                                        swPin.Write(compruebaPin(comandoFinal[1]).Item2);
+                                                    }
+                                                    sw.WriteLine("Pin guardado en archivo");
                                                 }
-                                                sw.WriteLine("Pin guardado en archivo");
-                                            }
-                                            else
-                                            {
-                                                sw.WriteLine("Error al guardar en archivo");
+                                                else
+                                                {
+                                                    sw.WriteLine("Error al guardar en archivo");
+                                                }
                                             }
                                             break;
                                         case "exit":
@@ -257,10 +260,12 @@ namespace Servicio3
         {
             try
             {
-
                 using (StreamReader sr = new StreamReader(path))
                 {
-                    users = sr.ReadToEnd().Split(';');
+                    while (sr.ReadLine() != null)
+                    {
+                        users = sr.ReadToEnd().Split(';');
+                    }
                 }
             }
             catch (IOException e)
@@ -277,9 +282,16 @@ namespace Servicio3
                 using (StreamReader sr = new StreamReader(path))
                 {
                     string content = sr.ReadToEnd().Trim();
-                    for (int i = 0; i < 3; i++)
+                    if (content.Length >= 4)
                     {
-                        pin += content[i];
+                        for (int i = 0; i <= 3; i++)
+                        {
+                            pin += content[i];
+                        }
+                    }
+                    else
+                    {
+                        pin = "-1";
                     }
                 }
             }
